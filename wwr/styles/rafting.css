@@ -1,0 +1,437 @@
+/* Exciting Expeditions — refreshed rafting website design */
+
+:root {
+    --navy: #092e55;
+    --deep-navy: #062344;
+    --blue: #078bd2;
+    --sky: #dff3ff;
+    --yellow: #ffd23f;
+    --white: #ffffff;
+    --ink: #173452;
+    --heading-font: Arial, Helvetica, sans-serif;
+    --body-font: Arial, Helvetica, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--ink);
+    background: var(--white);
+    line-height: 1.65;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.site-header {
+    width: 100%;
+    min-height: 104px;
+    padding: 12px clamp(20px, 5vw, 64px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    background: var(--white);
+    position: relative;
+    z-index: 2;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+.logo img {
+    width: min(285px, 28vw);
+    height: auto;
+}
+
+.main-nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: clamp(8px, 2.2vw, 30px);
+    list-style: none;
+}
+
+.main-nav a {
+    display: inline-block;
+    padding: 11px 19px;
+    color: var(--navy);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 30px;
+    transition: background-color .2s ease, color .2s ease, transform .2s ease;
+}
+
+.main-nav a:hover,
+.main-nav a:focus-visible,
+.main-nav a.active {
+    color: var(--white);
+    background: #0867a8;
+}
+
+.main-nav a:hover {
+    transform: translateY(-2px);
+}
+
+/* Hero */
+.hero {
+    min-height: clamp(390px, 43vw, 570px);
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    isolation: isolate;
+    background: var(--deep-navy);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(90deg, rgba(3, 25, 19, .91) 0%, rgba(3, 25, 19, .72) 34%, rgba(3, 25, 19, .08) 75%);
+}
+
+.hero-image {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 52%;
+}
+
+.hero-content {
+    width: min(1180px, 100%);
+    margin: 0 auto;
+    padding: 65px clamp(24px, 5vw, 64px) 90px;
+    color: var(--white);
+}
+
+.hero-title {
+    color: var(--white);
+    font-family: var(--heading-font);
+    font-size: clamp(3.4rem, 7.5vw, 6.3rem);
+    font-weight: 900;
+    line-height: .98;
+    letter-spacing: -3px;
+    text-shadow: 0 3px 18px rgba(0, 0, 0, .25);
+}
+
+.hero-title span {
+    color: var(--yellow);
+}
+
+.hero-content h1 {
+    margin-top: 20px;
+    color: var(--white);
+    font-family: Georgia, serif;
+    font-size: clamp(1.5rem, 3vw, 2.45rem);
+    font-style: italic;
+    font-weight: 700;
+}
+
+.hero-swoosh {
+    display: block;
+    width: 185px;
+    height: 13px;
+    margin: 18px 0 0 78px;
+    border-top: 8px solid var(--yellow);
+    border-radius: 50%;
+    transform: rotate(-8deg);
+}
+
+/* Shared section styling */
+.about-section,
+.history-section,
+.adventures-section {
+    padding: clamp(48px, 6vw, 78px) clamp(24px, 5vw, 64px);
+}
+
+.about-section {
+    width: min(1180px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.35fr .9fr;
+    align-items: center;
+    gap: clamp(32px, 6vw, 76px);
+}
+
+.section-copy h2,
+.history-copy h2,
+.adventures-section h2 {
+    position: relative;
+    margin-bottom: 22px;
+    padding-left: 25px;
+    color: var(--navy);
+    font-family: var(--heading-font);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+.section-copy h2::before,
+.history-copy h2::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    bottom: 3px;
+    left: 0;
+    width: 9px;
+    border-radius: 8px;
+    background: var(--blue);
+}
+
+.section-copy p,
+.history-copy p {
+    max-width: 690px;
+    color: #193957;
+    font-size: clamp(1rem, 1.45vw, 1.18rem);
+    line-height: 1.8;
+}
+
+.about-image {
+    width: 100%;
+    height: 285px;
+    object-fit: cover;
+    object-position: center;
+    border: 7px solid var(--white);
+    border-radius: 22px;
+    box-shadow: 0 8px 24px rgba(7, 67, 112, .2);
+    transform: rotate(1deg);
+}
+
+.history-section {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(115deg, #e9f7ff 0%, #d5efff 100%);
+}
+
+.history-copy {
+    width: min(1180px, 100%);
+    margin: 0 auto;
+}
+
+.history-copy p {
+    max-width: 850px;
+}
+
+.adventures-section {
+    min-height: 125px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    text-align: center;
+    background: var(--white);
+}
+
+.adventures-section h2 {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    color: var(--navy);
+    font-family: Georgia, serif;
+    font-size: clamp(1.7rem, 3vw, 2.3rem);
+    font-style: italic;
+}
+
+/* Footer */
+.site-footer {
+    width: 100%;
+    min-height: 125px;
+    padding: 24px clamp(20px, 4vw, 54px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    color: var(--white);
+    background: linear-gradient(110deg, var(--deep-navy), var(--navy));
+    border-top: 8px solid var(--blue);
+}
+
+.footer-tagline {
+    color: var(--white);
+    font-family: Georgia, serif;
+    font-size: clamp(1.3rem, 2.4vw, 2rem);
+    font-style: italic;
+    font-weight: 700;
+}
+
+.copyright {
+    color: var(--white);
+    font-size: .95rem;
+    text-align: center;
+}
+
+.socialmedia {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.socialmedia a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    border-radius: 12px;
+    transition: transform .2s ease, opacity .2s ease;
+}
+
+.socialmedia a:hover,
+.socialmedia a:focus-visible {
+    transform: translateY(-4px);
+    opacity: .85;
+}
+
+.socialmedia img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Tablet */
+@media (max-width: 800px) {
+    .site-header {
+        flex-direction: column;
+        gap: 8px;
+        padding: 14px 20px 18px;
+    }
+
+    .logo img {
+        width: 230px;
+    }
+
+    .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 4px;
+    }
+
+    .main-nav a {
+        padding: 9px 13px;
+        font-size: .95rem;
+    }
+
+    .about-section {
+        grid-template-columns: 1fr  .85fr;
+        gap: 28px;
+    }
+
+    .about-image {
+        height: 240px;
+    }
+
+    .site-footer {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+/* Mobile */
+@media (max-width: 560px) {
+    .site-header {
+        min-height: auto;
+    }
+
+    .logo img {
+        width: 205px;
+    }
+
+    .main-nav ul {
+        gap: 2px;
+    }
+
+    .main-nav a {
+        padding: 8px 10px;
+        font-size: .88rem;
+    }
+
+    .hero {
+        min-height: 430px;
+        align-items: flex-end;
+    }
+
+    .hero::before {
+        background: linear-gradient(0deg, rgba(3, 25, 19, .88) 0%, rgba(3, 25, 19, .48) 55%, rgba(3, 25, 19, .08) 100%);
+    }
+
+    .hero-image {
+        object-position: 58% center;
+    }
+
+    .hero-content {
+        padding: 50px 23px 70px;
+    }
+
+    .hero-title {
+        font-size: clamp(3.2rem, 15vw, 4.5rem);
+        letter-spacing: -2px;
+    }
+
+    .hero-content h1 {
+        margin-top: 14px;
+    }
+
+    .about-section,
+    .history-section,
+    .adventures-section {
+        padding: 42px 23px;
+    }
+
+    .about-section {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .about-image {
+        height: 250px;
+        transform: none;
+    }
+
+    .section-copy h2,
+    .history-copy h2 {
+        font-size: 2.1rem;
+    }
+
+    .section-copy p,
+    .history-copy p {
+        font-size: 1rem;
+    }
+
+    .site-footer {
+        flex-direction: column;
+        gap: 16px;
+        padding: 30px 18px;
+    }
+
+    .copyright {
+        font-size: .85rem;
+    }
+
+    .socialmedia {
+        gap: 12px;
+    }
+
+    .socialmedia a {
+        width: 46px;
+        height: 46px;
+    }
+}

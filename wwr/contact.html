@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Exciting Expeditions</title>
+    <meta name="description" content="Contact Exciting Expeditions for rafting reservations, questions, and suggestions. Find our address, phone number, email, and meet our team.">
+    <meta name="author" content="Daniel Omotayo">
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Exciting Expeditions logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="trips.html">Trips</a>
+            <a href="contact.html" aria-current="page">Contact Us</a>
+        </nav>
+    </header>
+
+    <main class="contact-main">
+        <section class="contact-intro">
+            <h1>Contact Us</h1>
+            <h2>Exciting Expeditions</h2>
+            <address>
+                123 Main River Street<br>
+                Kolob, California<br>
+                <a href="tel:+19999999999">+1 999 999 9999</a><br>
+                <a href="mailto:info@whitewater.com">info@whitewater.com</a>
+            </address>
+        </section>
+
+        <section class="contact-details" aria-label="Contact information and message form">
+            <div class="map-container">
+                <iframe
+                    title="Map showing the Exciting Expeditions area in Kolob, California"
+                    src="https://www.google.com/maps?q=Kolob%20California&output=embed"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <form class="contact-form" action="#" method="get">
+                <div class="form-field">
+                    <label for="fullname">Name</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                </div>
+
+                <fieldset class="purpose-fieldset">
+                    <legend>Message Purpose</legend>
+                    <label><input type="radio" name="purpose" value="general-inquiry" required> General Inquiry</label>
+                    <label><input type="radio" name="purpose" value="reservation-question"> Reservation Question</label>
+                    <label><input type="radio" name="purpose" value="website-suggestion"> Website Suggestion</label>
+                </fieldset>
+
+                <div class="form-field message-field">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+                </div>
+
+                <label class="newsletter-label" for="newsletter">
+                    <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+                    Please subscribe me to the monthly newsletter
+                </label>
+
+                <button type="submit">Get in Touch!</button>
+            </form>
+        </section>
+
+        <section class="team-section">
+            <h2>We Are Here to Serve You</h2>
+            <div class="team-gallery">
+                <figure>
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Portrait of Olivia Bennett">
+                    <figcaption><strong>Olivia Bennett</strong><span>Reservations Manager</span></figcaption>
+                </figure>
+                <figure>
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Portrait of Daniel Carter">
+                    <figcaption><strong>Daniel Carter</strong><span>Head Rafting Guide</span></figcaption>
+                </figure>
+                <figure>
+                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Portrait of Sophia Brooks">
+                    <figcaption><strong>Sophia Brooks</strong><span>Customer Support Officer</span></figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Exciting Expeditions | Daniel Omotayo</p>
+        <nav class="socialmedia">
+            <a href="https://www.facebook.com/"><img src="images/facebook.svg" alt="Visit our Facebook page"></a>
+            <a href="https://www.linkedin.com/"><img src="images/linkedin.svg" alt="Visit our LinkedIn page"></a>
+            <a href="https://www.instagram.com/"><img src="images/instagram.svg" alt="Visit our Instagram page"></a>
+        </nav>
+    </footer>
+</body>
+</html>
